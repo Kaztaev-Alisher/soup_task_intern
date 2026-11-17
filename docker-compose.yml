@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: queue
+      POSTGRES_PASSWORD: queue
+      POSTGRES_DB: queue
+    command: postgres -c max_connections=200
+    volumes:
+      - ./app/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    ports:
+      - "${DB_PORT:-55433}:5432"   # host access for the harness and tests
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U queue -d queue"]
+      interval: 1s
+      timeout: 3s
+      retries: 60
+
+  api:
+    build: .
+    init: true
+    restart: unless-stopped
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000 --no-access-log
+    environment: &env
+      DATABASE_URL: postgresql://queue:queue@db:5432/queue
+      LEASE_SECONDS: ${LEASE_SECONDS:-5}
+      MAX_ATTEMPTS: ${MAX_ATTEMPTS:-5}
+      # Everything below is for the chaos harness only (see README). Never set in normal operation.
+      BUG_NO_FENCING: ${BUG_NO_FENCING:-0}
+      BUG_RACY_CLAIM: ${BUG_RACY_CLAIM:-0}
+      BUG_SPLIT_TX: ${BUG_SPLIT_TX:-0}
+      CRASH_POINTS: ${CRASH_POINTS:-}
+      FREEZE_POINTS: ${FREEZE_POINTS:-}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  worker:
+    build: .
+    init: true                 # python is not PID 1, so a crash point can really SIGKILL itself
+    restart: unless-stopped    # a worker that dies comes back (docker kill by the harness is restarted by the harness)
+    command: python -m app.worker
+    environment: *env
+    deploy:
+      replicas: 4   # the chaos harness scales this to 8
+    depends_on:
+      db:
+        condition: service_healthy

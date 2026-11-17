@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-8.3.4, pluggy-1.7.0 -- C:\Users\kazta\AppData\Local\Temp\claude\1ef89ad1a475d231\a7cfc337-2aa8-43b0-8c17-85b62058453a\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\kazta\AppData\Local\Claude-Data\anthropicpbc.claude_fnn82j28hfe8t\scratch-workspaces\a78c150b-5f23-401c-a744-249ebca8dac8\ba639d5a-c28c-4e37-adb2-d1dcccc23ac5\scratch-2026-11-16-be7a89\soup-job-queue
+plugins: anyio-4.16.0
+collecting ... collected 21 items / 17 deselected / 4 selected
+
+tests/test_silent_failures.py::test_cancel_complete_race_has_exactly_one_winner[READ COMMITTED] 
+  [READ COMMITTED] 300 races: cancel won 107, complete won 193, serialization errors 0, inconsistent 0
+PASSED
+tests/test_silent_failures.py::test_cancel_complete_race_has_exactly_one_winner[REPEATABLE READ] 
+  [REPEATABLE READ] 300 races: cancel won 0, complete won 0, serialization errors 300, inconsistent 0
+PASSED
+tests/test_silent_failures.py::test_cancel_complete_race_has_exactly_one_winner[SERIALIZABLE] 
+  [SERIALIZABLE] 300 races: cancel won 0, complete won 1, serialization errors 299, inconsistent 0
+PASSED
+tests/test_silent_failures.py::test_cancel_complete_race_is_detected_without_fencing 
+  no fencing: 92 of 300 races ended inconsistent, e.g. [('2b7c2d34-dfad-48d8-9b29-e32e929d3ff7', {'cancel': 'cancelled', 'complete': True}, 'succeeded', 1)]
+PASSED
+
+================ 4 passed, 17 deselected in 151.70s (0:02:31) =================

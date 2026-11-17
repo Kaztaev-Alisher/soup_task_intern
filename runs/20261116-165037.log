@@ -1,0 +1,286 @@
+[16:50:37.666] chaos run 20261116-165037  args={'jobs': 10000, 'workers': 8, 'kill_interval': 2.0, 'pause_interval': 7.0, 'api_kill_interval': 20.0, 'db_kill_interval': 0.0, 'crash_points': 'claimed:0.003,mid_complete:0.003,after_complete:0.003', 'freeze_points': 'mid_complete:0.002', 'lease': 5.0, 'rps': 0, 'concurrency': 64, 'cancel_frac': 0.05, 'cancel_running_interval': 0.5, 'seed': 112, 'timeout': 1800, 'tag': '', 'bug': None}
+[16:50:38.139] host: Windows-11-10.0.26200-SP0, python 3.13.12, docker 29.9.3
+[16:50:44.887] stack up: 8 workers, tables truncated, isolation=read committed, PostgreSQL 16.16 on x86_64-pc-linux-musl
+[16:50:46.633] CHAOS kill -9  worker 5aba3eaa217b
+[16:50:48.730] CHAOS kill -9  worker 9ef3364eedf6
+[16:50:49.706] CHAOS kill -9  worker ccf9ef02e710
+[16:50:50.410] CHAOS freeze   worker d69e1ee244f6 for 8.3s (lease 5.0s) -> zombie
+[16:50:50.538] progress submitted=435/10000 db={'cancelled': 1, 'failed': 5, 'queued': 210, 'running': 9, 'succeeded': 225} kills=3 freezes=1
+[16:50:51.978] CHAOS kill -9  worker 5aba3eaa217b
+[16:50:53.582] CHAOS kill -9  worker 9ef3364eedf6
+[16:50:55.470] CHAOS kill -9  worker 9ef3364eedf6
+[16:50:55.545] progress submitted=1060/10000 db={'cancelled': 5, 'failed': 8, 'queued': 640, 'running': 6, 'succeeded': 414} kills=6 freezes=1
+[16:50:56.720] CHAOS kill -9  worker 5aba3eaa217b
+[16:50:58.843] CHAOS kill -9  worker 2058c6ff76e6
+[16:51:00.551] progress submitted=1587/10000 db={'cancelled': 21, 'failed': 8, 'queued': 997, 'running': 9, 'succeeded': 567} kills=8 freezes=1
+[16:51:00.643] CHAOS freeze   worker ccf9ef02e710 for 7.6s (lease 5.0s) -> zombie
+[16:51:01.110] CHAOS kill -9  worker 5ac9991f9c12
+[16:51:02.652] CHAOS kill -9  worker 1fe26ab5b511
+[16:51:04.037] CHAOS kill -9  worker 5ac9991f9c12
+[16:51:05.568] progress submitted=2133/10000 db={'cancelled': 50, 'failed': 9, 'queued': 1351, 'running': 10, 'succeeded': 728} kills=11 freezes=2
+[16:51:05.925] CHAOS kill -9  worker d69e1ee244f6
+[16:51:08.786] CHAOS kill -9  worker 9ef3364eedf6
+[16:51:10.579] progress submitted=2641/10000 db={'cancelled': 76, 'failed': 13, 'queued': 1606, 'running': 7, 'succeeded': 956} kills=13 freezes=2
+[16:51:11.005] CHAOS freeze   worker 5ac9991f9c12 for 9.1s (lease 5.0s) -> zombie
+[16:51:11.020] CHAOS kill -9  worker 2058c6ff76e6
+[16:51:13.672] CHAOS kill -9  API    5e0b9c75d248
+[16:51:14.486] CHAOS kill -9  worker d69e1ee244f6
+[16:51:15.597] progress submitted=2823/10000 db={'cancelled': 89, 'failed': 20, 'queued': 1484, 'running': 7, 'succeeded': 1234} kills=15 freezes=3
+[16:51:16.358] CHAOS kill -9  worker 528dc86d814b
+[16:51:18.568] CHAOS freeze   worker 5aba3eaa217b for 10.3s (lease 5.0s) -> zombie
+[16:51:18.688] CHAOS kill -9  worker 1fe26ab5b511
+[16:51:20.152] CHAOS kill -9  worker 528dc86d814b
+[16:51:20.605] progress submitted=3198/10000 db={'cancelled': 124, 'failed': 24, 'queued': 1703, 'running': 7, 'succeeded': 1354} kills=18 freezes=4
+[16:51:22.293] CHAOS kill -9  worker d69e1ee244f6
+[16:51:24.327] CHAOS kill -9  worker 5ac9991f9c12
+[16:51:25.625] progress submitted=3780/10000 db={'cancelled': 136, 'failed': 29, 'queued': 1991, 'running': 7, 'succeeded': 1631} kills=20 freezes=4
+[16:51:25.894] CHAOS kill -9  API    5e0b9c75d248
+[16:51:26.566] CHAOS kill -9  worker 1fe26ab5b511
+[16:51:28.434] CHAOS freeze   worker 2058c6ff76e6 for 9.8s (lease 5.0s) -> zombie
+[16:51:28.979] CHAOS kill -9  worker 528dc86d814b
+[16:51:30.631] progress submitted=3817/10000 db={'cancelled': 148, 'failed': 36, 'queued': 1807, 'running': 8, 'succeeded': 1839} kills=22 freezes=5
+[16:51:31.194] CHAOS kill -9  worker 1fe26ab5b511
+[16:51:33.654] CHAOS kill -9  worker 528dc86d814b
+[16:51:35.121] CHAOS kill -9  worker ccf9ef02e710
+[16:51:35.642] progress submitted=4288/10000 db={'cancelled': 173, 'failed': 43, 'queued': 2092, 'running': 6, 'succeeded': 1997} kills=25 freezes=5
+[16:51:37.663] CHAOS freeze   worker ccf9ef02e710 for 10.6s (lease 5.0s) -> zombie
+[16:51:37.894] CHAOS kill -9  worker 1fe26ab5b511
+[16:51:39.251] CHAOS kill -9  worker 528dc86d814b
+[16:51:40.652] progress submitted=4554/10000 db={'cancelled': 190, 'failed': 46, 'queued': 2202, 'running': 9, 'succeeded': 2133} kills=27 freezes=6
+[16:51:40.749] CHAOS kill -9  worker 2058c6ff76e6
+[16:51:41.846] CHAOS kill -9  worker 9ef3364eedf6
+[16:51:43.654] CHAOS kill -9  worker 2058c6ff76e6
+[16:51:44.599] CHAOS freeze   worker d69e1ee244f6 for 9.4s (lease 5.0s) -> zombie
+[16:51:45.442] CHAOS kill -9  worker 5ac9991f9c12
+[16:51:45.662] progress submitted=4926/10000 db={'cancelled': 206, 'failed': 47, 'queued': 2390, 'running': 5, 'succeeded': 2298} kills=31 freezes=7
+[16:51:47.670] CHAOS kill -9  worker 5aba3eaa217b
+[16:51:49.458] CHAOS kill -9  worker 9ef3364eedf6
+[16:51:50.687] progress submitted=5272/10000 db={'cancelled': 225, 'failed': 49, 'queued': 2595, 'running': 5, 'succeeded': 2404} kills=33 freezes=7
+[16:51:50.984] CHAOS kill -9  API    5e0b9c75d248
+[16:51:52.032] CHAOS kill -9  worker 2058c6ff76e6
+[16:51:53.549] CHAOS kill -9  worker 528dc86d814b
+[16:51:54.384] CHAOS freeze   worker 5ac9991f9c12 for 8.2s (lease 5.0s) -> zombie
+[16:51:55.458] CHAOS kill -9  worker 2058c6ff76e6
+[16:51:55.695] progress submitted=5292/10000 db={'cancelled': 233, 'failed': 59, 'queued': 2429, 'running': 8, 'succeeded': 2571} kills=36 freezes=8
+[16:51:57.861] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:00.445] CHAOS freeze   worker 1fe26ab5b511 for 9.7s (lease 5.0s) -> zombie
+[16:52:00.702] progress submitted=5845/10000 db={'cancelled': 254, 'failed': 65, 'queued': 2792, 'running': 9, 'succeeded': 2737} kills=37 freezes=9
+[16:52:00.743] CHAOS kill -9  worker 2058c6ff76e6
+[16:52:02.532] CHAOS kill -9  worker ccf9ef02e710
+[16:52:05.199] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:05.714] progress submitted=6428/10000 db={'cancelled': 278, 'failed': 67, 'queued': 3224, 'running': 7, 'succeeded': 2873} kills=40 freezes=9
+[16:52:07.021] CHAOS freeze   worker 9ef3364eedf6 for 7.9s (lease 5.0s) -> zombie
+[16:52:07.508] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:10.483] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:10.720] progress submitted=6820/10000 db={'cancelled': 303, 'failed': 69, 'queued': 3476, 'running': 7, 'succeeded': 2980} kills=42 freezes=10
+[16:52:11.530] CHAOS kill -9  worker 2058c6ff76e6
+[16:52:14.513] CHAOS kill -9  worker 5ac9991f9c12
+[16:52:15.742] progress submitted=7294/10000 db={'cancelled': 329, 'failed': 73, 'queued': 3691, 'running': 6, 'succeeded': 3216} kills=44 freezes=10
+[16:52:15.955] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:17.173] CHAOS freeze   worker 1fe26ab5b511 for 7.9s (lease 5.0s) -> zombie
+[16:52:18.213] CHAOS kill -9  worker 9ef3364eedf6
+[16:52:20.762] progress submitted=7614/10000 db={'cancelled': 343, 'failed': 77, 'queued': 3780, 'running': 10, 'succeeded': 3409} kills=46 freezes=11
+[16:52:20.865] CHAOS kill -9  API    5e0b9c75d248
+[16:52:20.991] CHAOS kill -9  worker 5ac9991f9c12
+[16:52:22.772] CHAOS kill -9  worker 2058c6ff76e6
+[16:52:25.778] progress submitted=7642/10000 db={'cancelled': 358, 'failed': 79, 'queued': 3666, 'running': 10, 'succeeded': 3544} kills=48 freezes=11
+[16:52:25.882] CHAOS kill -9  worker 2058c6ff76e6
+[16:52:26.444] CHAOS freeze   worker 528dc86d814b for 8.2s (lease 5.0s) -> zombie
+[16:52:27.329] CHAOS kill -9  worker d69e1ee244f6
+[16:52:29.476] CHAOS kill -9  worker d69e1ee244f6
+[16:52:30.788] progress submitted=8129/10000 db={'cancelled': 383, 'failed': 79, 'queued': 3964, 'running': 6, 'succeeded': 3707} kills=51 freezes=12
+[16:52:31.306] CHAOS kill -9  worker 9ef3364eedf6
+[16:52:33.047] CHAOS kill -9  worker ccf9ef02e710
+[16:52:34.410] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:35.798] progress submitted=8745/10000 db={'cancelled': 403, 'failed': 83, 'queued': 4400, 'running': 9, 'succeeded': 3864} kills=54 freezes=12
+[16:52:36.261] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:36.730] CHAOS freeze   worker ccf9ef02e710 for 10.9s (lease 5.0s) -> zombie
+[16:52:37.393] CHAOS kill -9  worker 2058c6ff76e6
+[16:52:38.385] CHAOS kill -9  worker d69e1ee244f6
+[16:52:40.311] CHAOS kill -9  worker 2058c6ff76e6
+[16:52:40.808] progress submitted=9273/10000 db={'cancelled': 428, 'failed': 88, 'queued': 4814, 'running': 10, 'succeeded': 3947} kills=58 freezes=13
+[16:52:43.063] CHAOS kill -9  worker 1fe26ab5b511
+[16:52:43.559] CHAOS kill -9  API    5e0b9c75d248
+[16:52:44.995] CHAOS kill -9  worker 5ac9991f9c12
+[16:52:46.106] progress submitted=9512/10000 db={'cancelled': 446, 'failed': 97, 'queued': 4842, 'running': 8, 'succeeded': 4127} kills=60 freezes=13
+[16:52:46.494] CHAOS freeze   worker 528dc86d814b for 9.6s (lease 5.0s) -> zombie
+[16:52:47.065] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:49.008] CHAOS kill -9  worker 9ef3364eedf6
+[16:52:50.796] CHAOS kill -9  worker ccf9ef02e710
+[16:52:51.136] progress submitted=9717/10000 db={'cancelled': 479, 'failed': 98, 'queued': 4834, 'running': 8, 'succeeded': 4315} kills=63 freezes=14
+[16:52:51.594] CHAOS freeze   worker 2058c6ff76e6 for 10.0s (lease 5.0s) -> zombie
+[16:52:53.081] CHAOS kill -9  worker ccf9ef02e710
+[16:52:53.528] all 10000 keys submitted in 128.1s; waiting for replays/cancels and for the queue to drain
+[16:52:54.139] CHAOS kill -9  worker 5aba3eaa217b
+[16:52:55.188] CHAOS kill -9  worker 1fe26ab5b511
+[16:52:56.146] progress submitted=10000/10000 db={'cancelled': 507, 'failed': 102, 'queued': 4976, 'running': 8, 'succeeded': 4407} kills=66 freezes=15
+[16:52:56.836] CHAOS kill -9  worker 5ac9991f9c12
+[16:52:59.415] CHAOS kill -9  worker 1fe26ab5b511
+[16:53:00.557] CHAOS freeze   worker d69e1ee244f6 for 8.9s (lease 5.0s) -> zombie
+[16:53:00.985] CHAOS kill -9  worker 9ef3364eedf6
+[16:53:01.162] progress submitted=10000/10000 db={'cancelled': 530, 'failed': 107, 'queued': 4819, 'running': 8, 'succeeded': 4536} kills=69 freezes=16
+[16:53:02.504] CHAOS kill -9  worker ccf9ef02e710
+[16:53:03.161] CHAOS kill -9  API    5e0b9c75d248
+[16:53:03.574] CHAOS kill -9  worker 5aba3eaa217b
+[16:53:04.638] CHAOS freeze   worker 2058c6ff76e6 for 7.4s (lease 5.0s) -> zombie
+[16:53:05.478] CHAOS kill -9  worker 528dc86d814b
+[16:53:06.180] progress submitted=10000/10000 db={'cancelled': 538, 'failed': 111, 'queued': 4670, 'running': 9, 'succeeded': 4672} kills=72 freezes=17
+[16:53:06.929] CHAOS kill -9  worker 1fe26ab5b511
+[16:53:08.463] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:11.026] CHAOS kill -9  worker 9ef3364eedf6
+[16:53:11.197] progress submitted=10000/10000 db={'cancelled': 554, 'failed': 111, 'queued': 4540, 'running': 5, 'succeeded': 4790} kills=75 freezes=17
+[16:53:12.148] CHAOS kill -9  worker d69e1ee244f6
+[16:53:14.033] CHAOS freeze   worker ccf9ef02e710 for 7.8s (lease 5.0s) -> zombie
+[16:53:14.476] CHAOS kill -9  worker 528dc86d814b
+[16:53:16.096] CHAOS kill -9  API    5e0b9c75d248
+[16:53:16.214] progress submitted=10000/10000 db={'cancelled': 559, 'failed': 114, 'queued': 4381, 'running': 9, 'succeeded': 4937} kills=77 freezes=18
+[16:53:17.074] CHAOS kill -9  worker d69e1ee244f6
+[16:53:18.118] CHAOS freeze   worker 5aba3eaa217b for 7.4s (lease 5.0s) -> zombie
+[16:53:18.901] CHAOS kill -9  worker 1fe26ab5b511
+[16:53:20.484] CHAOS kill -9  worker 528dc86d814b
+[16:53:21.232] progress submitted=10000/10000 db={'cancelled': 562, 'failed': 115, 'queued': 4280, 'running': 6, 'succeeded': 5037} kills=80 freezes=19
+[16:53:22.367] CHAOS kill -9  worker 1fe26ab5b511
+[16:53:23.269] CHAOS freeze   worker 9ef3364eedf6 for 7.3s (lease 5.0s) -> zombie
+[16:53:23.592] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:25.216] CHAOS kill -9  worker d69e1ee244f6
+[16:53:26.248] progress submitted=10000/10000 db={'cancelled': 581, 'failed': 119, 'queued': 4074, 'running': 2, 'succeeded': 5224} kills=83 freezes=20
+[16:53:27.615] CHAOS kill -9  worker ccf9ef02e710
+[16:53:30.003] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:30.718] CHAOS freeze   worker 5aba3eaa217b for 8.4s (lease 5.0s) -> zombie
+[16:53:31.265] progress submitted=10000/10000 db={'cancelled': 599, 'failed': 122, 'queued': 3888, 'running': 6, 'succeeded': 5385} kills=85 freezes=21
+[16:53:32.726] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:34.036] CHAOS kill -9  worker d69e1ee244f6
+[16:53:34.987] CHAOS freeze   worker 528dc86d814b for 9.3s (lease 5.0s) -> zombie
+[16:53:36.282] progress submitted=10000/10000 db={'cancelled': 617, 'failed': 129, 'queued': 3697, 'running': 7, 'succeeded': 5550} kills=87 freezes=22
+[16:53:36.864] CHAOS kill -9  worker d69e1ee244f6
+[16:53:39.385] CHAOS kill -9  worker 9ef3364eedf6
+[16:53:40.868] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:41.294] progress submitted=10000/10000 db={'cancelled': 636, 'failed': 130, 'queued': 3474, 'running': 4, 'succeeded': 5756} kills=90 freezes=22
+[16:53:43.417] CHAOS kill -9  API    5e0b9c75d248
+[16:53:43.811] CHAOS kill -9  worker d69e1ee244f6
+[16:53:43.824] CHAOS freeze   worker ccf9ef02e710 for 8.0s (lease 5.0s) -> zombie
+[16:53:45.688] CHAOS kill -9  worker 5aba3eaa217b
+[16:53:46.302] progress submitted=10000/10000 db={'cancelled': 640, 'failed': 134, 'queued': 3263, 'running': 9, 'succeeded': 5954} kills=92 freezes=23
+[16:53:47.326] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:50.137] CHAOS kill -9  worker 1fe26ab5b511
+[16:53:51.317] progress submitted=10000/10000 db={'cancelled': 651, 'failed': 136, 'queued': 3069, 'running': 6, 'succeeded': 6138} kills=94 freezes=23
+[16:53:52.492] CHAOS kill -9  worker 5ac9991f9c12
+[16:53:53.652] CHAOS freeze   worker ccf9ef02e710 for 9.5s (lease 5.0s) -> zombie
+[16:53:53.846] CHAOS kill -9  worker 5aba3eaa217b
+[16:53:56.333] progress submitted=10000/10000 db={'cancelled': 668, 'failed': 143, 'queued': 2848, 'running': 9, 'succeeded': 6332} kills=96 freezes=24
+[16:53:56.432] CHAOS kill -9  worker 9ef3364eedf6
+[16:53:57.440] CHAOS freeze   worker 5aba3eaa217b for 8.4s (lease 5.0s) -> zombie
+[16:53:58.979] CHAOS kill -9  worker d69e1ee244f6
+[16:54:01.329] CHAOS kill -9  worker 528dc86d814b
+[16:54:01.350] progress submitted=10000/10000 db={'cancelled': 687, 'failed': 149, 'queued': 2651, 'running': 5, 'succeeded': 6508} kills=99 freezes=25
+[16:54:02.744] CHAOS kill -9  worker 5ac9991f9c12
+[16:54:03.808] CHAOS kill -9  worker 2058c6ff76e6
+[16:54:06.362] progress submitted=10000/10000 db={'cancelled': 702, 'failed': 151, 'queued': 2435, 'running': 10, 'succeeded': 6702} kills=101 freezes=25
+[16:54:06.465] CHAOS kill -9  worker 9ef3364eedf6
+[16:54:07.760] CHAOS freeze   worker 1fe26ab5b511 for 7.1s (lease 5.0s) -> zombie
+[16:54:08.661] CHAOS kill -9  worker 5ac9991f9c12
+[16:54:09.898] CHAOS kill -9  worker d69e1ee244f6
+[16:54:11.369] progress submitted=10000/10000 db={'cancelled': 721, 'failed': 153, 'queued': 2267, 'running': 3, 'succeeded': 6856} kills=104 freezes=26
+[16:54:11.480] CHAOS kill -9  worker 5ac9991f9c12
+[16:54:12.245] CHAOS freeze   worker 2058c6ff76e6 for 9.0s (lease 5.0s) -> zombie
+[16:54:12.711] CHAOS kill -9  API    5e0b9c75d248
+[16:54:14.140] CHAOS kill -9  worker 9ef3364eedf6
+[16:54:16.385] progress submitted=10000/10000 db={'cancelled': 723, 'failed': 154, 'queued': 2138, 'running': 8, 'succeeded': 6977} kills=106 freezes=27
+[16:54:16.632] CHAOS kill -9  worker d69e1ee244f6
+[16:54:18.887] CHAOS freeze   worker 9ef3364eedf6 for 8.4s (lease 5.0s) -> zombie
+[16:54:19.044] CHAOS kill -9  worker 528dc86d814b
+[16:54:21.400] progress submitted=10000/10000 db={'cancelled': 739, 'failed': 157, 'queued': 1977, 'running': 7, 'succeeded': 7120} kills=108 freezes=28
+[16:54:21.508] CHAOS kill -9  worker 1fe26ab5b511
+[16:54:23.010] CHAOS kill -9  worker 5aba3eaa217b
+[16:54:23.183] CHAOS freeze   worker d69e1ee244f6 for 9.0s (lease 5.0s) -> zombie
+[16:54:24.272] CHAOS kill -9  worker 1fe26ab5b511
+[16:54:26.187] CHAOS kill -9  worker 5aba3eaa217b
+[16:54:26.419] progress submitted=10000/10000 db={'cancelled': 759, 'failed': 159, 'queued': 1752, 'running': 5, 'succeeded': 7325} kills=112 freezes=29
+[16:54:28.705] CHAOS kill -9  worker 5ac9991f9c12
+[16:54:29.541] CHAOS freeze   worker ccf9ef02e710 for 10.4s (lease 5.0s) -> zombie
+[16:54:31.437] progress submitted=10000/10000 db={'cancelled': 773, 'failed': 162, 'queued': 1552, 'running': 7, 'succeeded': 7506} kills=113 freezes=30
+[16:54:31.575] CHAOS kill -9  worker 2058c6ff76e6
+[16:54:34.022] CHAOS kill -9  worker 5aba3eaa217b
+[16:54:34.500] CHAOS kill -9  API    5e0b9c75d248
+[16:54:36.062] CHAOS kill -9  worker d69e1ee244f6
+[16:54:36.451] progress submitted=10000/10000 db={'cancelled': 781, 'failed': 165, 'queued': 1310, 'running': 9, 'succeeded': 7735} kills=116 freezes=30
+[16:54:37.552] CHAOS freeze   worker 528dc86d814b for 7.3s (lease 5.0s) -> zombie
+[16:54:38.030] CHAOS kill -9  worker 9ef3364eedf6
+[16:54:39.158] CHAOS kill -9  worker 2058c6ff76e6
+[16:54:40.850] CHAOS kill -9  worker 5aba3eaa217b
+[16:54:41.472] progress submitted=10000/10000 db={'cancelled': 790, 'failed': 170, 'queued': 1118, 'running': 10, 'succeeded': 7912} kills=119 freezes=31
+[16:54:42.448] CHAOS kill -9  worker d69e1ee244f6
+[16:54:44.779] CHAOS kill -9  worker d69e1ee244f6
+[16:54:45.899] CHAOS kill -9  worker 5ac9991f9c12
+[16:54:46.488] progress submitted=10000/10000 db={'cancelled': 806, 'failed': 172, 'queued': 937, 'running': 10, 'succeeded': 8075} kills=122 freezes=31
+[16:54:47.743] CHAOS kill -9  worker 1fe26ab5b511
+[16:54:47.847] CHAOS freeze   worker 528dc86d814b for 10.1s (lease 5.0s) -> zombie
+[16:54:49.080] CHAOS kill -9  worker 5aba3eaa217b
+[16:54:51.481] CHAOS kill -9  worker 1fe26ab5b511
+[16:54:51.506] progress submitted=10000/10000 db={'cancelled': 825, 'failed': 177, 'queued': 730, 'running': 10, 'succeeded': 8258} kills=125 freezes=32
+[16:54:53.235] CHAOS kill -9  worker ccf9ef02e710
+[16:54:54.386] CHAOS freeze   worker 5aba3eaa217b for 7.9s (lease 5.0s) -> zombie
+[16:54:55.792] CHAOS kill -9  worker ccf9ef02e710
+[16:54:56.523] progress submitted=10000/10000 db={'cancelled': 842, 'failed': 180, 'queued': 589, 'running': 6, 'succeeded': 8383} kills=127 freezes=33
+[16:54:58.521] CHAOS kill -9  worker 9ef3364eedf6
+[16:55:01.354] CHAOS kill -9  worker 528dc86d814b
+[16:55:01.538] progress submitted=10000/10000 db={'cancelled': 859, 'failed': 181, 'queued': 344, 'running': 6, 'succeeded': 8610} kills=129 freezes=33
+[16:55:01.878] CHAOS kill -9  API    5e0b9c75d248
+[16:55:03.466] CHAOS freeze   worker 2058c6ff76e6 for 7.7s (lease 5.0s) -> zombie
+[16:55:04.016] CHAOS kill -9  worker 5ac9991f9c12
+[16:55:06.091] CHAOS kill -9  worker d69e1ee244f6
+[16:55:06.555] progress submitted=10000/10000 db={'cancelled': 859, 'failed': 186, 'queued': 143, 'running': 9, 'succeeded': 8803} kills=131 freezes=34
+[16:55:07.336] CHAOS kill -9  worker 5ac9991f9c12
+[16:55:08.706] CHAOS kill -9  worker 5aba3eaa217b
+[16:55:09.701] CHAOS kill -9  worker 1fe26ab5b511
+[16:55:11.569] CHAOS kill -9  worker 9ef3364eedf6
+[16:55:11.573] progress submitted=10000/10000 db={'cancelled': 875, 'failed': 186, 'running': 8, 'succeeded': 8931} kills=135 freezes=34
+[16:55:12.325] CHAOS freeze   worker 5aba3eaa217b for 7.4s (lease 5.0s) -> zombie
+[16:55:14.209] CHAOS kill -9  worker d69e1ee244f6
+[16:55:16.590] progress submitted=10000/10000 db={'cancelled': 879, 'failed': 186, 'succeeded': 8935} kills=136 freezes=35
+[16:55:16.916] CHAOS kill -9  worker 2058c6ff76e6
+[16:55:18.738] CHAOS kill -9  worker 2058c6ff76e6
+[16:55:20.877] CHAOS kill -9  worker 528dc86d814b
+[16:55:21.608] progress submitted=10000/10000 db={'cancelled': 879, 'failed': 186, 'succeeded': 8935} kills=139 freezes=35
+[16:55:21.656] CHAOS freeze   worker 1fe26ab5b511 for 7.2s (lease 5.0s) -> zombie
+[16:55:27.757] chaos stopped, everything resumed; waiting 13s so the last zombies can wake up and try to write
+[16:55:40.764] --- invariants ---
+[16:55:40.915]   [PASS] I1  no job lost: every acknowledged key is in the DB with the id the client got
+[16:55:40.915]   [PASS] I2  no duplicate job: exactly one row per idempotency key
+[16:55:40.918]   [PASS] I3  nothing left queued/running after chaos stopped
+[16:55:40.932]   [PASS] I4  no job has more than one side effect
+[16:55:40.959]   [PASS] I5  every succeeded job has exactly one side effect
+[16:55:40.973]   [PASS] I6  no failed/cancelled job has a side effect
+[16:55:40.985]   [PASS] I7  the side effect was written by the last (winning) attempt
+[16:55:41.018]   [PASS] I8  no double claim: attempts = requeues + 1, and one execution row per attempt
+[16:55:41.025]   [PASS] I9  terminal rows are clean: finished_at set, no lease left behind
+[16:55:41.027]   [PASS] I10 cancel is honest: 200 => job ends cancelled; 409 => job ended as reported
+[16:55:41.033]   [PASS] I11 outcome matches the job: 'fail' jobs never succeed, others fail only via max attempts
+[16:55:41.033]   [PASS] I12 idempotent create held on the client side (same id, one 201, 409 on changed body)
+[16:55:43.555]   [PASS] I13 list pagination returns every job exactly once
+[16:55:43.561]   [PASS] I14 an attempt killed before its COMMIT (after claim / inside the completion tx) left no side effect
+[16:55:43.570]   [PASS] I15 an attempt killed right after its COMMIT is final: succeeded, one effect, never re-run
+[16:55:43.572]   [PASS] I16 an attempt frozen inside its completion tx past the idle-in-transaction timeout never commits
+[16:55:43.578] --- what the run actually exercised (a green run that exercised nothing proves nothing) ---
+[16:55:43.583]   final states: {'cancelled': 879, 'failed': 186, 'succeeded': 8935}
+[16:55:43.588]   executions per job (attempts -> jobs): {0: 484, 1: 9356, 2: 154, 3: 5, 5: 1}
+[16:55:43.591]   jobs executed more than once: 160   side_effects rows: 8935
+[16:55:43.591]   writes refused by fencing, by what the job looked like at that moment:
+[16:55:43.594]         21  complete   ZOMBIE: a newer attempt already owned the job
+[16:55:43.594]          3  heartbeat  ZOMBIE: a newer attempt already owned the job
+[16:55:43.594]        306  complete   job had been cancelled
+[16:55:43.594]          3  fail       job had been cancelled
+[16:55:43.594]         58  heartbeat  job had been cancelled
+[16:55:43.596]   stale (zombie) writes refused in total: 24
+[16:55:43.596]   fault points fired inside workers: {'after_complete': 33, 'claimed': 35, 'mid_complete': 25, 'mid_complete_freeze': 14}
+[16:55:43.600]   cancelled after having started at least once: 395
+[16:55:43.604]   failed by max attempts: 0
+[16:55:43.606]   cancel requests by HTTP code: {200: 879, 409: 183}
+[16:55:43.606]   chaos lasted 277s: worker kill -9 = 139 (one every 2.0s), missed kills = 0, freezes = 36, API kills = 11, DB kills = 0, docker errors = 0
+[16:55:43.606]   client: 201=9944 replay-200=4311 changed-body-409=149 gets=3002 forced_timeouts=69 transport_errors=6549 http_5xx=1
+[16:55:43.623]   API latency ms (from the Windows host, through Docker's port proxy): p50=491.9 p95=1400.0 p99=2015.3 max=4002.0  (18468 requests)
+[16:55:43.623]   submit phase: 128.1s = 78 new jobs/s, 144 requests/s overall
+[16:55:43.640]   create->succeeded seconds: p50=74.6 p95=132.7 p99=136.1
+[16:55:43.641]   total wall time: 295.9s
+[16:55:43.641] RESULT: PASS (all 16 invariants hold)
+[16:55:43.641] log written to C:\Users\kazta\AppData\Local\Claude-Data\anthropicpbc.claude_fnn82j28hfe8t\scratch-workspaces\a78c150b-5f23-401c-a744-249ebca8dac8\ba639d5a-c28c-4e37-adb2-d1dcccc23ac5\scratch-2026-11-16-be7a89\soup-job-queue\runs\20261116-165037.log

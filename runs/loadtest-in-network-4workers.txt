@@ -1,0 +1,24 @@
+=================== RPS=100 for 60 s
+target 100 rps for 60s, 64 client threads, open loop
+completed 6000 of 6000 requests in 60.0s = 100.0 rps; transport errors 0; HTTP codes {200: 2961, 201: 2525, 409: 514}
+  create n= 2525  p50=    6.1 ms  p95=  295.5 ms  p99= 1295.9 ms  max= 1437.5 ms
+  get    n= 2278  p50=    3.3 ms  p95=    4.7 ms  p99=  734.1 ms  max= 1076.0 ms
+  list   n=  601  p50=    6.0 ms  p95=   14.2 ms  p99=  877.7 ms  max= 1071.0 ms
+  cancel n=  596  p50=    4.0 ms  p95=    6.6 ms  p99=  521.4 ms  max= 1062.1 ms
+  ALL    n= 6000  p50=    5.3 ms  p95=   13.3 ms  p99= 1106.4 ms  max= 1437.5 ms
+=================== RPS=300 for 30 s
+target 300 rps for 30s, 64 client threads, open loop
+completed 9000 of 9000 requests in 30.0s = 299.7 rps; transport errors 0; HTTP codes {200: 5018, 201: 3686, 409: 296}
+  create n= 3686  p50=   25.9 ms  p95=  154.7 ms  p99=  245.0 ms  max=  317.7 ms
+  get    n= 3505  p50=   22.0 ms  p95=  150.9 ms  p99=  246.1 ms  max=  308.8 ms
+  list   n=  908  p50=   35.8 ms  p95=  160.0 ms  p99=  242.9 ms  max=  326.7 ms
+  cancel n=  901  p50=   27.8 ms  p95=  161.6 ms  p99=  242.3 ms  max=  295.0 ms
+  ALL    n= 9000  p50=   25.7 ms  p95=  154.8 ms  p99=  244.8 ms  max=  326.7 ms
+=================== RPS=1000 for 20 s
+target 1000 rps for 20s, 64 client threads, open loop
+completed 20000 of 20000 requests in 62.1s = 322.1 rps; transport errors 0; HTTP codes {200: 11816, 201: 8150, 409: 34}
+  create n= 8150  p50=21391.1 ms  p95=40065.9 ms  p99=41734.3 ms  max=42095.0 ms
+  get    n= 7866  p50=21398.2 ms  p95=40070.5 ms  p99=41761.1 ms  max=42093.1 ms
+  list   n= 1974  p50=20885.4 ms  p95=39976.8 ms  p99=41653.8 ms  max=42096.9 ms
+  cancel n= 2010  p50=21687.4 ms  p95=40157.1 ms  p99=41640.4 ms  max=42093.6 ms
+  ALL    n=20000  p50=21363.4 ms  p95=40068.3 ms  p99=41736.7 ms  max=42096.9 ms

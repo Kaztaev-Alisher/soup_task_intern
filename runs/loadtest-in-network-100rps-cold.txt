@@ -1,0 +1,11 @@
+target 100 rps for 60s, 64 client threads, open loop
+completed 6000 of 6000 requests in 60.0s = 100.0 rps; transport errors 0; HTTP codes {200: 3489, 201: 2492, 409: 19}
+  create n= 2492  p50=    7.7 ms  p95=   12.0 ms  p99=   36.0 ms  max=  200.7 ms
+  get    n= 2303  p50=    3.2 ms  p95=    4.6 ms  p99=    7.3 ms  max=   53.0 ms
+  list   n=  606  p50=    9.6 ms  p95=   13.0 ms  p99=   19.9 ms  max=   31.0 ms
+  cancel n=  599  p50=    7.3 ms  p95=   10.9 ms  p99=   16.6 ms  max=  140.7 ms
+  ALL    n= 6000  p50=    7.2 ms  p95=   11.1 ms  p99=   18.2 ms  max=  200.7 ms
+  seconds (by scheduled send time) containing a request slower than 100 ms: 2 of 60
+    t= 23s  requests= 100  slow=   1  max=  137.3 ms
+    t= 24s  requests= 100  slow=  13  max=  200.7 ms
+  after the first 5 s only: n=5500  p50=7.1 ms  p95=11.0 ms  p99=17.3 ms  max=200.7 ms

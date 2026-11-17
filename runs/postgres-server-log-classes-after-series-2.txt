@@ -1,0 +1,84 @@
+# Postgres server log of the db container, from its creation (2026-11-16 16:35 local) to 2026-11-17 11:02 local.
+# Covers pytest run 3, both smoke runs, chaos series 2 and the load tests. 41589 lines in total.
+# Produced with: docker compose logs --no-log-prefix db | sed (strip timestamp/pid, digits -> N) | sort | uniq -c | sort -rn
+# count  message class
+   1839 HINT:  The transaction might succeed if retried.
+   1839 ERROR:  could not serialize access due to read/write dependencies among transactions
+   1359 ERROR:  could not serialize access due to concurrent update
+   1263 DETAIL:  Reason code: Canceled on identification as a pivot, during write.
+    237 DETAIL:  Reason code: Canceled on conflict out to pivot N, during read.
+    191 LOG:  unexpected EOF on client connection with an open transaction
+    135 DETAIL:  Reason code: Canceled on identification as a pivot, during commit attempt.
+    116 DETAIL:  Reason code: Canceled on identification as a pivot, during conflict in checking.
+    100 LOG:  could not receive data from client: Connection reset by peer
+     85 DETAIL:  Reason code: Canceled on commit attempt with conflict in from prepared pivot.
+     50 FATAL:  terminating connection due to unexpected postmaster exit
+     50 FATAL:  terminating connection due to idle-in-transaction timeout
+     44 FATAL:  the database system is starting up
+     27 LOG:  checkpoint complete: wrote N buffers (N.N%); N WAL file(s) added, N removed, N recycled; write=N.N s, sync=N.N s, 
+     18 ERROR:  canceling statement due to lock timeout
+     17 LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.N"
+     17 LOG:  database system is ready to accept connections
+     17 CONTEXT:  while updating tuple (N,N) in relation "jobs"
+     16 LOG:  starting PostgreSQL N.N on xN_N-pc-linux-musl, compiled by gcc (Alpine N.N.N) N.N.N, N-bit
+     16 LOG:  listening on IPvN address "N.N.N.N", port N
+     16 LOG:  listening on IPvN address "::", port N
+     15 LOG:  database system was not properly shut down; automatic recovery in progress
+     15 LOG:  database system was interrupted; last known up at N-N-N N:N:N UTC
+     15 LOG:  checkpoint starting: end-of-recovery immediate wait
+     12 LOG:  checkpoint starting: time
+      7 FATAL:  the database system is not yet accepting connections
+      7 DETAIL:  Consistent recovery state has not been yet reached.
+      3 DETAIL:  Reason code: Canceled on identification as a pivot, during conflict out checking.
+      2 LOG:  invalid record length at N/BNDN: expected at least N, got N
+      2 LOG:  database system was shut down at N-N-N N:N:N UTC
+      1 LOG:  shutting down
+      1 LOG:  redo starts at N/NENAN
+      1 LOG:  redo starts at N/NEN
+      1 LOG:  redo starts at N/NDN
+      1 LOG:  redo starts at N/NCNEN
+      1 LOG:  redo starts at N/NBNENAN
+      1 LOG:  redo starts at N/NBN
+      1 LOG:  redo starts at N/NBCNCN
+      1 LOG:  redo starts at N/NBANDN
+      1 LOG:  redo starts at N/NANABBN
+      1 LOG:  redo starts at N/BNDBN
+      1 LOG:  redo starts at N/BNAN
+      1 LOG:  redo starts at N/BN
+      1 LOG:  redo starts at N/ANFN
+      1 LOG:  redo starts at N/AN
+      1 LOG:  redo starts at N/ACNDN
+      1 LOG:  redo done at N/NENEN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/NEN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/NCN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/NBNEN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/NBCN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/NBBNFBN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/NANABN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/N system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/BNFN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/BNDN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/BNAN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/BCNADN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/ANFNCN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/ANDN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  redo done at N/ACN system usage: CPU: user: N.N s, system: N.N s, elapsed: N.N s
+      1 LOG:  invalid record length at N/NENCN: expected at least N, got N
+      1 LOG:  invalid record length at N/NEN: expected at least N, got N
+      1 LOG:  invalid record length at N/NCAN: expected at least N, got N
+      1 LOG:  invalid record length at N/NBNEN: expected at least N, got N
+      1 LOG:  invalid record length at N/NBCN: expected at least N, got N
+      1 LOG:  invalid record length at N/NBBNFDN: expected at least N, got N
+      1 LOG:  invalid record length at N/NANABN: expected at least N, got N
+      1 LOG:  invalid record length at N/N: expected at least N, got N
+      1 LOG:  invalid record length at N/BN: expected at least N, got N
+      1 LOG:  invalid record length at N/BCNBN: expected at least N, got N
+      1 LOG:  invalid record length at N/ANFNFN: expected at least N, got N
+      1 LOG:  invalid record length at N/ANFN: expected at least N, got N
+      1 LOG:  invalid record length at N/ACN: expected at least N, got N
+      1 LOG:  database system is shut down
+      1 LOG:  could not send data to client: Broken pipe
+      1 LOG:  checkpoint starting: shutdown immediate
+      1 LOG:  background worker "logical replication launcher" (PID N) exited with exit code N
+      1 FATAL:  connection to client lost
+      1 CONTEXT:  while inserting index tuple (N,N) in relation "jobs"

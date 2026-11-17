@@ -1,0 +1,7 @@
+=== 11:05:13 chaos.py --seed 304 --bug BUG_SPLIT_TX --crash-points= --freeze-points= --pause-interval 0 --api-kill-interval 0 --cancel-frac 0 --cancel-running-interval 0 --tag killonly
+    exit code 1
+=== 11:09:32 chaos.py --seed 116 --db-kill-interval 30 --tag dbkill
+    exit code 0
+=== 11:16:11 restoring a clean stack (no bug flags, no fault points, 4 workers)
+    exit code 0
+=== series done 11:16:16

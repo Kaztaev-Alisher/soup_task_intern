@@ -1,0 +1,52 @@
+[15:54:04.937] chaos run 20261116-155404  args={'jobs': 500, 'workers': 8, 'kill_interval': 2.0, 'pause_interval': 7.0, 'lease': 5.0, 'rps': 0, 'concurrency': 64, 'cancel_frac': 0.05, 'seed': 1, 'timeout': 1800, 'bug': None}
+[15:54:19.764] stack up: 8 workers, tables truncated, isolation=read committed, PostgreSQL 16.16 on x86_64-pc-linux-musl
+[15:54:23.146] CHAOS kill -9  worker 5a19ed50c74e
+[15:54:25.158] CHAOS freeze   worker ae7a96253a53 for 8.5s (lease 5.0s) -> zombie
+[15:54:25.795] progress submitted=158/500 db={'failed': 2, 'running': 4, 'succeeded': 164} kills=1 freezes=1
+[15:54:26.150] CHAOS kill -9  worker 1c487a6aa022
+[15:54:30.427] CHAOS kill -9  worker 9ee0ba5b72c5
+[15:54:31.007] progress submitted=274/500 db={'cancelled': 1, 'failed': 3, 'queued': 1, 'running': 6, 'succeeded': 276} kills=3 freezes=1
+[15:54:33.494] CHAOS kill -9  worker 5a19ed50c74e
+[15:54:36.235] progress submitted=362/500 db={'cancelled': 1, 'failed': 3, 'running': 2, 'succeeded': 376} kills=4 freezes=1
+[15:54:36.707] CHAOS kill -9  worker 4505e797536d
+[15:54:41.252] CHAOS kill -9  worker f9af56b5a656
+[15:54:41.402] progress submitted=448/500 db={'cancelled': 3, 'failed': 4, 'running': 1, 'succeeded': 462} kills=6 freezes=1
+[15:54:41.888] CHAOS freeze   worker 4505e797536d for 9.3s (lease 5.0s) -> zombie
+[15:54:44.388] all 500 keys submitted in 24.1s; waiting for replays/cancels and for the queue to drain
+[15:54:45.081] CHAOS kill -9  worker ae7a96253a53
+[15:54:46.417] progress submitted=500/500 db={'cancelled': 3, 'failed': 5, 'succeeded': 492} kills=7 freezes=2
+[15:54:49.870] CHAOS kill -9  worker ae7a96253a53
+[15:54:51.428] progress submitted=500/500 db={'cancelled': 3, 'failed': 5, 'succeeded': 492} kills=8 freezes=2
+[15:54:52.908] CHAOS kill -9  worker 4505e797536d
+[15:54:56.442] progress submitted=500/500 db={'cancelled': 3, 'failed': 5, 'succeeded': 492} kills=9 freezes=2
+[15:54:59.972] chaos stopped, all workers resumed; waiting 16s so frozen zombies can wake up and try to write
+[15:55:15.476] --- invariants ---
+[15:55:15.484]   [PASS] I1  no job lost: every acknowledged key is in the DB with the id the client got
+[15:55:15.485]   [PASS] I2  no duplicate job: exactly one row per idempotency key
+[15:55:15.485]   [PASS] I3  nothing left queued/running after chaos stopped
+[15:55:15.488]   [PASS] I4  no job has more than one side effect
+[15:55:15.492]   [PASS] I5  every succeeded job has exactly one side effect
+[15:55:15.496]   [PASS] I6  no failed/cancelled job has a side effect
+[15:55:15.501]   [PASS] I7  the side effect was written by the last (winning) attempt
+[15:55:15.506]   [PASS] I8  no double claim: attempts = requeues + 1, and one execution row per attempt
+[15:55:15.508]   [PASS] I9  terminal rows are clean: finished_at set, no lease left behind
+[15:55:15.508]   [PASS] I10 cancel is honest: 200 => job ends cancelled; 409 => job ended as reported
+[15:55:15.508]   [PASS] I11 outcome matches the job: 'fail' jobs never succeed, others fail only via max attempts
+[15:55:15.508]   [PASS] I12 idempotent create held on the client side (same id, one 201, 409 on changed body)
+[15:55:16.155]   [PASS] I13 list pagination returns every job exactly once
+[15:55:16.155] --- what the run actually exercised (a green run that exercised nothing proves nothing) ---
+[15:55:16.157]   final states: {'cancelled': 3, 'failed': 5, 'succeeded': 492}
+[15:55:16.159]   executions per job (attempts -> jobs): {1: 498, 2: 2}
+[15:55:16.160]   jobs executed more than once: 2   side_effects rows: 492
+[15:55:16.162]   stale/cancelled writes refused by fencing (by kind): {'complete': 1, 'heartbeat': 2}
+[15:55:16.163]   cancelled after having started at least once: 3
+[15:55:16.165]   failed by max attempts: 0
+[15:55:16.165]   cancel requests by HTTP code: {409: 38, 200: 3}
+[15:55:16.165]   chaos: kills=9 freezes=2 docker_errors=0
+[15:55:16.165]   client: 201=500 replay-200=229 changed-body-409=3 gets=150 forced_timeouts=1 transport_errors=0 http_5xx=0
+[15:55:16.166]   API latency ms: p50=1628.1 p95=6613.1 p99=9838.5 max=12454.6  (923 requests)
+[15:55:16.166]   submit phase: 24.1s = 21 new jobs/s, 38 requests/s overall
+[15:55:16.174]   create->succeeded seconds: p50=0.1 p95=0.5 p99=0.7
+[15:55:16.174]   total wall time: 55.7s
+[15:55:16.174] RESULT: PASS (all 13 invariants hold)
+[15:55:16.174] log written to C:\Users\kazta\AppData\Local\Claude-Data\anthropicpbc.claude_fnn82j28hfe8t\scratch-workspaces\a78c150b-5f23-401c-a744-249ebca8dac8\ba639d5a-c28c-4e37-adb2-d1dcccc23ac5\scratch-2026-11-16-be7a89\soup-job-queue\runs\20261116-155404.log

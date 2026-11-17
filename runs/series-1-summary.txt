@@ -1,0 +1,15 @@
+=== 16:04:09 chaos.py --seed 101
+    exit code 0
+=== 16:07:26 chaos.py --seed 102
+    exit code 0
+=== 16:10:41 chaos.py --seed 103
+    exit code 0
+=== 16:14:01 chaos.py --seed 201 --jobs 3000 --bug BUG_NO_FENCING
+    exit code 1
+=== 16:15:34 chaos.py --seed 202 --jobs 3000 --bug BUG_RACY_CLAIM
+    exit code 1
+=== 16:18:00 chaos.py --seed 203 --jobs 3000 --bug BUG_SPLIT_TX
+    exit code 1
+=== 16:19:52 chaos.py --seed 104 --rps 100
+    exit code 0
+=== series done 16:23:10

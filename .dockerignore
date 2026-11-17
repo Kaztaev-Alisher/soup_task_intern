@@ -1,0 +1,8 @@
+.git
+.venv
+runs
+tests
+harness
+__pycache__
+*.pyc
+*.md

@@ -1,0 +1,25 @@
+=== 16:45:30 chaos.py --seed 111
+    exit code 0
+=== 16:50:36 chaos.py --seed 112
+    exit code 0
+=== 16:55:43 chaos.py --seed 113
+    exit code 0
+=== 17:01:16 chaos.py --seed 114 --rps 100 --tag rps100
+    exit code 0
+=== 17:06:40 chaos.py --seed 115 --db-kill-interval 30 --tag dbkill
+    exit code 0
+=== 17:13:06 chaos.py --seed 211 --jobs 3000 --bug BUG_NO_FENCING
+    exit code 1
+=== 17:15:22 chaos.py --seed 212 --jobs 3000 --bug BUG_RACY_CLAIM
+    exit code 1
+=== 17:18:30 chaos.py --seed 213 --jobs 3000 --bug BUG_SPLIT_TX
+    exit code 1
+=== 17:20:53 chaos.py --seed 301 --bug BUG_SPLIT_TX --crash-points= --freeze-points= --pause-interval 0 --api-kill-interval 0 --cancel-frac 0 --cancel-running-interval 0 --tag killonly
+    exit code 1
+=== 17:25:16 chaos.py --seed 302 --bug BUG_SPLIT_TX --crash-points= --freeze-points= --pause-interval 0 --api-kill-interval 0 --cancel-frac 0 --cancel-running-interval 0 --tag killonly
+    exit code 1
+=== 17:29:47 chaos.py --seed 303 --bug BUG_SPLIT_TX --crash-points= --freeze-points= --pause-interval 0 --api-kill-interval 0 --cancel-frac 0 --cancel-running-interval 0 --tag killonly
+    exit code 1
+=== 17:52:24 restoring a clean stack (no bug flags, no fault points, 4 workers)
+    exit code 0
+=== series done 17:52:30
