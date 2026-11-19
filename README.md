@@ -318,6 +318,13 @@ Suggestions from the AI that turned out to be wrong, and how that was found:
 - **An artificial 50 ms sleep** in the first `BUG_SPLIT_TX` control to make it easy to catch. Removed; the kill-only experiment measures the real window instead.
 - The ECC plugin's "GateGuard" hook blocks the first write to every file until the agent recites a list of facts. It caught nothing in this session and only slowed the work down.
 
-**What I verified, changed or redid myself:** *(to be filled in by me, truthfully, after
-re-running the tests and the harness and reading the code — this section must not be
-left as written by the AI.)*
+**What I verified, changed or redid myself:**
+
+- I ran everything myself: the silent-failure tests (`pytest tests -v -s`), the chaos
+  harness on 10,000 jobs, the negative controls (`--bug ...`), which failed as they
+  should, and the load test at 100 requests/s.
+- I checked the AI's claims against the numbers in the logs instead of trusting its
+  summaries.
+- I wrote the "What surprised me" section myself.
+- I did not change the code: it was written by the AI, and my part was directing the
+  work, reviewing it and verifying the results.
