@@ -296,20 +296,11 @@ With 1 and 2 done I would ship it for internal use where a short outage is accep
 
 ## What surprised me, and what still concerns me
 
-*(Draft written from the findings above — to be rewritten in my own words.)*
+The hardest part wasn't building the queue—it was proving it works. My first chaos test passed even after 40 workers died and zero jobs recovered, simply because it wasn't testing anything. Now, I only trust a green test if I can see the failure actually happened.
 
-What surprised me most is how often the *harness* was wrong rather than the system: it
-was wrong four times, and each time it was still printing PASS — once for a run in which
-40 workers were killed and recovery never ran. The second surprise was that fencing
-hides a broken claim completely: half the jobs ran several times and every final state
-was correct, which is reassuring and alarming in equal measure. The third was a failure
-the design note did not contain at all, a worker frozen in the two milliseconds between
-its UPDATE and its COMMIT holding a job hostage; no chaos run could have shown it,
-because nothing was ever wrong in the final state. What still concerns me: the one slow
-load-test run I cannot explain; that the nastiest fault, a network partition, was never
-really injected; that "exactly-once effect" is true here only because the effect is a
-row in the same transaction; and that every protection was verified at 10,000 rows on
-one machine with one clock.
+I was also surprised by how smart and wrong the AI could be at once. It nailed fencing and leases, yet wrote a test client that measured itself instead of the server and misdiagnosed a latency spike. Checking its claims against real numbers was the best thing I did.
+
+A few things still worry me: an unexplained 1.1s latency spike, no real network partition tests, and the fact that "exactly-once" only holds because the result lives in the same database.
 
 ## AI tools
 
